@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>The Great Reading Railroad Scheduler</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <script src="schedule.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>Train Scheduler</h1>
+        </div>
+        
+        <div class="card my-3">
+            <div class="card-header">
+                Current Train Schedules
+            </div>
+            <div class="card-body mx-5">
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Frequency(min)</th>
+                        <th scope="col">Next Arrival</th>
+                        <th scope="col">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="card my-3">
+            <div class="card-header">
+                Add a Train
+            </div>
+            <div class="card-body mx-5">
+                <form role="form">
+                    <div class="form-group row">
+                        <label for="name-input">Train Name</label>
+                        <input class="form-control" id="name-input" type="text">
+                    </div>
+                    <div class="form-group row">
+                        <label for="email-input">Destination</label>
+                        <input class="form-control" id="destination-input" type="text">
+                    </div>
+                    <div class="form-group row">
+                        <label for="age-input">First Train Time (HH:mm - military time)</label>
+                        <input class="form-control" id="time-input" type="text">
+                    </div>
+                    <div class="form-group row">
+                        <label for="age-input">Frequency (min)</label>
+                        <input class="form-control" id="freq-input" type="number">
+                    </div>
+                    <input class="btn btn-default" id="add-user" type="button" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+
+</html>
